@@ -35,7 +35,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ```
 # Clone the repository from GitHub and open the directory:
-git clone
+git clone https://github.com/albaihaqiMF/dokterku-mojadiapp.git
 
 # cd into your project directory
 cd dokterku-mojadiapp
