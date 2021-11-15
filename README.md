@@ -31,6 +31,28 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
+## Installation
+
+```
+# Clone the repository from GitHub and open the directory:
+git clone https://github.com/albaihaqiMF/dokterku-mojadiapp.git
+
+# cd into your project directory
+cd dokterku-mojadiapp
+
+#install composer and npm packages
+composer install
+npm install && npm run dev || yarn && yarn dev
+
+# Start prepare the environment:
+cp .env.example .env // setup database credentials
+php artisan key:generate
+php artisan migrate
+php artisan storage:link
+
+# Run your server
+php artisan serve
+
 ### Premium Partners
 
 - **[Vehikl](https://vehikl.com/)**
