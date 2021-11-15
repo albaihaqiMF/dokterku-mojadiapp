@@ -25,7 +25,8 @@
     <div class="flex overflow-hidden">
         <x-sidebar-menu />
         <!-- BEGIN: Content -->
-        <div>
+        <div class="content ">
+            <x-header-menu />
             {{ $slot }}
         </div>
         <!-- END: Content -->
