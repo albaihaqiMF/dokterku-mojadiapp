@@ -10,11 +10,16 @@ class ConsultationDetail extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'queue', 'consultationHeaderId'
+        'id', 'queue', 'consultationHeaderId', 'complaint', 'summary', 'isCancelled', 'userId'
     ];
 
     public function consultationHeader()
     {
         return $this->belongsTo(ConsultationHeader::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
