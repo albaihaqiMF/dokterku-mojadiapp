@@ -18,8 +18,10 @@ class CreateConsultationHeadersTable extends Migration
             $table->time('time');
             $table->date('date');
             $table->integer('maximumSlot');
-            $table->string('speciality');
-            $table->string('doctorId', 32);
+            $table->string('description');
+            $table->string('specialistId');
+            $table->foreign('specialistId')->references('id')->on('specialities');
+            $table->string('doctorId');
             $table->foreign('doctorId')->references('id')->on('users');
             $table->timestamps();
         });

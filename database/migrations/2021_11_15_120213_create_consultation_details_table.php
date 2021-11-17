@@ -16,8 +16,13 @@ class CreateConsultationDetailsTable extends Migration
         Schema::create('consultation_details', function (Blueprint $table) {
             $table->string('id');
             $table->integer('queue');
+            $table->string('complaint');
+            $table->string('summary');
+            $table->string('isCancelled');
             $table->string('consultationHeaderId');
             $table->foreign('consultationHeaderId')->references('id')->on('consultation_headers');
+            $table->string('userId');
+            $table->foreign('userId')->references('id')->on('users');
             $table->timestamps();
         });
     }
