@@ -15,7 +15,7 @@
                     <div class="font-medium">{{ $item->name }}</div>
                     <div class="text-gray-600 text-xs mt-0.5">{{ date('d M Y', strtotime($item->created_at)) }}</div>
                 </div>
-                <div class="text-theme-20">{{ $item->role->name }}</div>
+                <div class="text-theme-20">{{ $item->roleId }}</div>
             </div>
         </div>
         @empty
