@@ -13,6 +13,31 @@
                 <div class="side-menu__title"> Dashboard </div>
             </a>
         </li>
+        <li>
+            <a href="javascript:;" class="{{request()->routeIs('user.*') ? " side-menu side-menu--active" : "side-menu"
+                }}">
+                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                <div class="side-menu__title">
+                    Users
+                    <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
+                </div>
+            </a>
+            <ul class="">
+                <li>
+                    <a href="{{ route('user.doctor') }}" class="side-menu">
+                        <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                        <div class="side-menu__title"> Dokter </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('user.pasien') }}" class="side-menu">
+                        <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                        <div class="side-menu__title"> Pasien </div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
     </ul>
 </nav>
 <!-- END: Side Menu -->
