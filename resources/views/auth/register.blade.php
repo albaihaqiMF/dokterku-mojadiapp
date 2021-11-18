@@ -1,60 +1,61 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+<!DOCTYPE html>
+<html class="bg-white font-roboto" lang="en">
 
-        <x-jet-validation-errors class="mb-4" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrasi</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
+<body>
+    <div class="grid grid-cols-2 gap-4 pt-24">
+        <div>
             <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <h1 class="text-blue-700 text-center text-5xl pb-8 font-bold">Registrasi</h1>
             </div>
-
-            <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
-
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-jet-label for="terms">
-                        <div class="flex items-center">
-                            <x-jet-checkbox name="terms" id="terms"/>
-
-                            <div class="ml-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Privacy Policy').'</a>',
-                                ]) !!}
-                            </div>
-                        </div>
-                    </x-jet-label>
+            <form class="user pl-24 pr-24" action="" method="post">
+                <div class="form mt-3">
+                    <input type="text" class="form-control form-control-user2 rounded-full h-12 shadow-md" id="nama" name="nama"
+                        aria-describedby="nama" placeholder="Nama">
                 </div>
-            @endif
+                <div class="form mt-3">
+                    <input type="text" class="form-control form-control-user2 rounded-full h-12 shadow-md" id="notelp" name="notelp"
+                        aria-describedby="notelp" placeholder="No.Telp">
+                </div>
+                <div class="form mt-3">
+                    <input type="text" class="form-control form-control-user2 rounded-full h-12 shadow-md" id="email" name="email"
+                        aria-describedby="email" placeholder="Email">
+                </div>
+                <div class="form mt-3">
+                    <input type="text" class="form-control form-control-user2 rounded-full h-12 shadow-md" id="username" name="username"
+                        placeholder="Username">
+                </div>
+                <div class="form mt-2">
+                    <input type="password" class="form-control form-control-user2 rounded-full h-12 shadow-md" id="password" name="password"
+                        placeholder="Password">
+                </div>
+                <div class="form mt-2">
+                    <input type="password" class="form-control form-control-user2 rounded-full h-12 shadow-md" id="password2" name="password2"
+                        placeholder="Konfirmasi Password">
+                </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
+                <div class="text-center">
+                    <button type="submit" name="register"
+                        class="btn btn-reguser btn-block mt-8 bg-blue-500 text-white  rounded-full">Registrasi</button>
+                </div>
 
-                <x-jet-button class="ml-4">
-                    {{ __('Register') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+            </form>
+        </div>
+
+        <div>
+            <img src="/images/registrasi.png" alt="">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
