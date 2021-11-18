@@ -5,7 +5,6 @@
     "/js/ckeditor-balloon.js": "/js/ckeditor-balloon.js",
     "/js/ckeditor-balloon-block.js": "/js/ckeditor-balloon-block.js",
     "/js/ckeditor-document.js": "/js/ckeditor-document.js",
-    "/css/app.css": "/css/app.css",
     "/json/location.json": "/json/location.json",
     "/fonts/.DS_Store": "/fonts/.DS_Store",
     "/images/.DS_Store": "/images/.DS_Store",
@@ -74,5 +73,6 @@
     "/images/profile-7.jpg": "/images/profile-7.jpg",
     "/images/profile-8.jpg": "/images/profile-8.jpg",
     "/images/profile-9.jpg": "/images/profile-9.jpg",
-    "/images/woman-illustration.svg": "/images/woman-illustration.svg"
+    "/images/woman-illustration.svg": "/images/woman-illustration.svg",
+    "/css/app.css": "/css/app.css"
 }
