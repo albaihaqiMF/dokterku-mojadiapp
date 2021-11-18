@@ -15,22 +15,29 @@ class UserSeeder extends Seeder
     public function run()
     {
         $admin = [
+            'id' => 'USER01',
             'name' => 'Petugas',
             'email' => 'admin@admin.com',
             'password' => bcrypt('password'),
-            'role_id' => 1
+            'roleId' => 'STAFF',
+            'phoneNumber' => '0834234234234'
         ];
         $user = [
+            'id' => 'USER02',
             'name' => 'User',
             'email' => 'user@user.com',
             'password' => bcrypt('password'),
-            'role_id' => 3
+            'roleId' => 'PASIEN',
+            'phoneNumber' => '0834234234236'
         ];
         $dokter = [
+            'id' => 'USER03',
             'name' => 'Dokter',
             'email' => 'dokter@dokter.com',
             'password' => bcrypt('password'),
-            'role_id' => 2
+            'roleId' => 'DOKTER',
+            'phoneNumber' => '0834234234237',
+            'specialistId' => 'UMUM'
         ];
 
 

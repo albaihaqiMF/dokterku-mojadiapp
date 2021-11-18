@@ -10,7 +10,7 @@ class ConsultationHeader extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'time', 'date', 'maximumSlot', 'specialistId', 'doctorId', 'description'
+        'id', 'time', 'date', 'maximumSlot', 'doctorId', 'description'
     ];
 
     public function user()

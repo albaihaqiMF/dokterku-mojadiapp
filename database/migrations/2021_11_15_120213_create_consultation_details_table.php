@@ -14,14 +14,14 @@ class CreateConsultationDetailsTable extends Migration
     public function up()
     {
         Schema::create('consultation_details', function (Blueprint $table) {
-            $table->id();
+            $table->string('id', 32)->primary();
             $table->integer('queue');
             $table->string('complaint');
             $table->string('summary');
             $table->string('isCancelled');
-            $table->unsignedBigInteger('consultationHeaderId');
+            $table->string('consultationHeaderId', 32);
             $table->foreign('consultationHeaderId')->references('id')->on('consultation_headers');
-            $table->unsignedBigInteger('userId');
+            $table->string('userId', 32);
             $table->foreign('userId')->references('id')->on('users');
             $table->timestamps();
         });

@@ -14,14 +14,12 @@ class CreateConsultationHeadersTable extends Migration
     public function up()
     {
         Schema::create('consultation_headers', function (Blueprint $table) {
-            $table->id();
+            $table->string('id', 32)->primary();
             $table->time('time');
             $table->date('date');
             $table->integer('maximumSlot');
             $table->string('description');
-            $table->unsignedBigInteger('specialistId');
-            $table->foreign('specialistId')->references('id')->on('specialities');
-            $table->unsignedBigInteger('doctorId');
+            $table->string('doctorId', 32);
             $table->foreign('doctorId')->references('id')->on('users');
             $table->timestamps();
         });
