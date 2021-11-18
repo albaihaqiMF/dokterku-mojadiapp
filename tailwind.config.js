@@ -3,10 +3,12 @@ const primaryColors = require("@left4code/tw-starter/dist/js/colors");
 module.exports = {
     mode: "jit",
     purge: [
-        "./resources/**/*.{php,html,js,jsx,ts,tsx,vue}",
-        "./resources/**/*.{php,html,js,jsx,ts,tsx,vue}",
         "./node_modules/@left4code/tw-starter/**/*.js",
         ".//.html",
+        "./storage/framework/views/*.php",
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
     ],
     darkMode: "class",
     theme: {
