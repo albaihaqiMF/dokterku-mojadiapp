@@ -10,11 +10,21 @@ class ConsultationHeader extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'time', 'date', 'maximumSlot', 'doctorId', 'description'
+        'id', 'day', 'timeStart', 'timeEnd', 'date', 'timeStampId', 'roomId', 'maximumSlot', 'doctorId', 'description'
     ];
 
-    public function user()
+    public function timeStamp()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(TimeStamp::class);
+    }
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
+
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class);
     }
 }

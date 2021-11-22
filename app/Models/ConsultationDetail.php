@@ -10,7 +10,7 @@ class ConsultationDetail extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'queue', 'consultationHeaderId', 'complaint', 'summary', 'isCancelled', 'userId'
+        'id', 'queue', 'consultationHeaderId', 'statusId', 'patientId'
     ];
 
     public function consultationHeader()
@@ -18,8 +18,13 @@ class ConsultationDetail extends Model
         return $this->belongsTo(ConsultationHeader::class);
     }
 
-    public function user()
+    public function status()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Status::class);
+    }
+
+    public function patient()
+    {
+        return $this->belongsTo(Patient::class);
     }
 }
